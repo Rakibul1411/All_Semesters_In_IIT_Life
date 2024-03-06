@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "SJF"
+			"path" : "Priority_Scheduling_Non_Preemptive_"
 		}
 	],
 	"backtrace" : 1,
@@ -35,7 +35,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk -fcolor-diagnostics"
+					"fragment" : "-g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -mmacosx-version-min=14.3 -fcolor-diagnostics"
 				}
 			],
 			"language" : "CXX",
@@ -53,7 +53,7 @@
 			]
 		}
 	],
-	"id" : "SJF::@6890427a1f51a3e7e1df",
+	"id" : "Priority_Scheduling_Non_Preemptive_::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -69,8 +69,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "SJF",
-	"nameOnDisk" : "SJF",
+	"name" : "Priority_Scheduling_Non_Preemptive_",
+	"nameOnDisk" : "Priority_Scheduling_Non_Preemptive_",
 	"paths" : 
 	{
 		"build" : ".",

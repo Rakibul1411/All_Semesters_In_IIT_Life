@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+#include <iostream>
 #define n 5
 #define inf 5000
 using namespace std;

@@ -1,4 +1,4 @@
-# Install script for directory: /Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/SJF
+# Install script for directory: /Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/SJF(Without_Consideration_Arrival_Time-(Non_Preemptive))
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/SJF/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/SJF(Without_Consideration_Arrival_Time-(Non_Preemptive))/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
