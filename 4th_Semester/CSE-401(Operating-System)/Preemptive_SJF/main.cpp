@@ -1,0 +1,121 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <climits>
+using namespace std;
+
+struct Process {
+    string name;
+    int burst_time{};
+    int arrival_time{};
+    int remaining_burst_time{};
+    int start_time = 0;
+    int completion_time{};
+    int turn_around_time{};
+    int waiting_time{};
+    bool execute = false;
+    bool first_execute = false;
+    bool count = true;
+};
+
+int main() {
+    int p;
+    cout << "Enter the number of processes: ";
+    cin >> p;
+
+    vector<Process> processes(p);
+
+    freopen("input.txt", "r", stdin);
+    for (int i = 0; i < p; ++i) {
+        cin >> processes[i].name;
+        cin >> processes[i].arrival_time;
+        cin >> processes[i].burst_time;
+        processes[i].remaining_burst_time = processes[i].burst_time;
+    }
+
+    sort(processes.begin(), processes.end(), [](const Process &a, const Process &b) {
+        return a.arrival_time < b.arrival_time;
+    });
+
+    bool temp = false;
+
+    cout <<endl<<"Gantt Chart: " << endl;
+
+    int current_time = 0;
+    int completed_processes = 0;
+    while (completed_processes < p) {
+        int shortest_job_index = -1;
+        int shortest_burst_time = INT_MAX;
+        for (int j = 0; j < p; ++j) {
+            if (!processes[j].execute && processes[j].arrival_time <= current_time && processes[j].remaining_burst_time < shortest_burst_time) {
+                shortest_job_index = j;
+                shortest_burst_time = processes[j].remaining_burst_time;
+                if(processes[shortest_job_index].count){
+                    processes[shortest_job_index].first_execute = true;
+                }
+            }
+        }
+        if (shortest_job_index != -1) {
+
+            if(temp){
+                cout<<"IDLE Time: "<<current_time<<endl;
+                temp = false;
+            }
+
+            if(processes[shortest_job_index].first_execute ) {
+                processes[shortest_job_index].start_time = current_time;
+                processes[shortest_job_index].count = false;
+                processes[shortest_job_index].first_execute = false;
+            }
+            processes[shortest_job_index].completion_time = current_time + 1;
+            processes[shortest_job_index].remaining_burst_time -=1;
+            cout << "Process: " << processes[shortest_job_index].name << ", ";
+            cout << "Execution time: (" << current_time << ", " << processes[shortest_job_index].completion_time << ")" << endl;
+
+            if (processes[shortest_job_index].remaining_burst_time == 0) {
+                processes[shortest_job_index].execute = true;
+                processes[shortest_job_index].turn_around_time = current_time + 1 - processes[shortest_job_index].arrival_time;
+                processes[shortest_job_index].waiting_time = processes[shortest_job_index].turn_around_time - processes[shortest_job_index].burst_time;
+                completed_processes++;
+            }
+            current_time++;
+        } else {
+            cout<<"IDLE Time: "<<current_time<<endl;
+            current_time++;
+            temp = true;
+        }
+    }
+
+    cout<<endl;
+    for (int i = 0; i < p; ++i) {
+        processes[i].turn_around_time = processes[i].completion_time - processes[i].arrival_time;
+        processes[i].waiting_time = processes[i].turn_around_time - processes[i].burst_time;
+        cout << "Process name: " << processes[i].name << ", Start Time: " << processes[i].start_time << ", Completion Time: " << processes[i].completion_time << endl;
+    }
+
+    cout<<endl;
+
+    double avg_turn_around_time, avg_waiting_time, sum_turn_around_time=0, sum_waiting_time=0;
+
+    cout<<"Turn Around Time: "<<endl;
+    for (int i = 0; i < p; ++i) {
+        cout<<processes[i].name<<"= "<<processes[i].turn_around_time<<endl;
+        sum_turn_around_time += processes[i].turn_around_time;
+    }
+
+    cout<<endl;
+    cout<<"Waiting Time: "<<endl;
+    for (int i = 0; i < p; ++i) {
+        cout<<processes[i].name<<"= "<<processes[i].waiting_time<<endl;
+        sum_waiting_time += processes[i].waiting_time;
+    }
+
+    avg_turn_around_time = (sum_turn_around_time/p);
+    avg_waiting_time = (sum_waiting_time/p);
+
+    cout<<endl;
+    cout<<"Average Turn Around time: "<<avg_turn_around_time<<endl;
+    cout<<"Average Waiting time: "<<avg_waiting_time<<endl;
+    return 0;
+}

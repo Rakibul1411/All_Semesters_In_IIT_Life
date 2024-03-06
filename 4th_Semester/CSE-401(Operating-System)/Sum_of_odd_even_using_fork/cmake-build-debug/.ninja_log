@@ -1,0 +1,15 @@
+# ninja log v5
+0	701	1708400657919667866	CMakeFiles/Sum_of_odd_even_using_fork.dir/main.cpp.o	2711ff7a44013be7
+703	831	1708400658050766578	Sum_of_odd_even_using_fork	6cc7a0d5ceca8a29
+2	456	1708400728449691454	CMakeFiles/Sum_of_odd_even_using_fork.dir/main.cpp.o	2711ff7a44013be7
+456	497	1708400728490837056	Sum_of_odd_even_using_fork	6cc7a0d5ceca8a29
+2	440	1708400744781509745	CMakeFiles/Sum_of_odd_even_using_fork.dir/main.cpp.o	2711ff7a44013be7
+440	480	1708400744821826890	Sum_of_odd_even_using_fork	6cc7a0d5ceca8a29
+2	465	1708400816219817537	CMakeFiles/Sum_of_odd_even_using_fork.dir/main.cpp.o	2711ff7a44013be7
+465	510	1708400816265589466	Sum_of_odd_even_using_fork	6cc7a0d5ceca8a29
+2	450	1708400901184615795	CMakeFiles/Sum_of_odd_even_using_fork.dir/main.cpp.o	2711ff7a44013be7
+450	490	1708400901225542772	Sum_of_odd_even_using_fork	6cc7a0d5ceca8a29
+3	429	1708401908138568744	CMakeFiles/Sum_of_odd_even_using_fork.dir/main.cpp.o	2711ff7a44013be7
+429	469	1708401908179301782	Sum_of_odd_even_using_fork	6cc7a0d5ceca8a29
+2	660	1708404945382830431	CMakeFiles/Sum_of_odd_even_using_fork.dir/main.cpp.o	2711ff7a44013be7
+660	786	1708404945509475603	Sum_of_odd_even_using_fork	6cc7a0d5ceca8a29

@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.27"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Creating_Process",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Creating_Process::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Creating_Process-Debug-e0891075eca965bb0186.json",
+					"name" : "Creating_Process",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Creating_Process/cmake-build-debug",
+		"source" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Creating_Process"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
