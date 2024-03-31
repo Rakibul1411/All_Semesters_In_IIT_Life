@@ -42,7 +42,7 @@ rule CUSTOM_COMMAND
 # Rule for re-running cmake.
 
 rule RERUN_CMAKE
-  command = /Users/md.rakibulislam/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/FCFS" -B"/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/FCFS/cmake-build-debug"
+  command = /Users/md.rakibulislam/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake --regenerate-during-build -S"/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/FCFS" -B"/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/FCFS/cmake-build-debug"
   description = Re-running CMake...
   generator = 1
 
