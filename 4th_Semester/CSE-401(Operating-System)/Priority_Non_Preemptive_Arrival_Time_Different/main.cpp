@@ -8,7 +8,7 @@ struct Process {
     string name;
     int burst_time{};
     int arrival_time{};
-    int priority;
+    int priority{};
     int start_time = 0;
     int completion_time{};
     int turn_around_time{};
@@ -31,17 +31,6 @@ int main() {
         cin >> processes[i].priority;
     }
 
-//    struct Process temp;
-//    for (int i = 0; i < p; ++i) {
-//        for (int j = i+1; j < p; ++j) {
-//            if(processes[j].arrival_time < processes[i].arrival_time){
-//                temp = processes[i];
-//                processes[i] = processes[j];
-//                processes[j] = temp;
-//            }
-//        }
-//    }
-
     sort(processes.begin(), processes.end(), [](const Process &a, const Process &b) {
         return a.arrival_time < b.arrival_time;
     });
@@ -56,15 +45,14 @@ int main() {
                 highest_priority = processes[j].priority;
             }
         }
-        if (highest_priority_job_index != -1) {
 
+        if (highest_priority_job_index != -1) {
             processes[highest_priority_job_index].start_time = current_time;
             processes[highest_priority_job_index].completion_time = current_time + processes[highest_priority_job_index].burst_time;
             processes[highest_priority_job_index].execute = true;
-            cout << "Process: " << processes[highest_priority_job_index].name << ", ";
-            cout << "Execution time: (" << processes[highest_priority_job_index].start_time << ", " << processes[highest_priority_job_index].completion_time << ")" << endl;
             current_time = processes[highest_priority_job_index].completion_time;
-        } else {
+        }
+        else {
             int next_priority_index = -1;
             int min_arrival_time = INT_MAX;
             for (int j = 0; j < p; ++j) {
@@ -77,37 +65,43 @@ int main() {
             processes[next_priority_index].start_time = current_time;
             processes[next_priority_index].completion_time = current_time + processes[next_priority_index].burst_time;
             processes[next_priority_index].execute = true;
-            cout << "Process: " << processes[next_priority_index].name << ", ";
-            cout << "Execution time: (" << processes[next_priority_index].start_time << ", " << processes[next_priority_index].completion_time << ")" << endl;
             current_time = processes[next_priority_index].completion_time;
         }
     }
 
     cout<<endl;
+
+    //Print Gantt Chart
+    cout << "Grant Chart: " << endl;
+    cout << "|   ";
     for (int i = 0; i < p; ++i) {
-        cout << "Process name: " << processes[i].name << ", Start Time: " << processes[i].start_time << ", Completion Time: " << processes[i].completion_time << endl;
+        if(i == 0) {
+            cout << processes[i].name << "   |   ";
+        }
+        else{
+            if(processes[i-1].completion_time != processes[i].start_time){
+                cout << "Idle  |   " << processes[i].name << "   |   ";
+            }
+            else{
+                cout << processes[i].name << "   |   ";
+            }
+        }
+    }
+    cout << endl;
+
+    for (int i = 0; i < p; ++i) {
+        if(i == 0){
+            cout << processes[i].start_time << "       " << processes[i].completion_time;
+        } else{
+            if(processes[i-1].completion_time != processes[i].start_time){
+                cout << "         " << processes[i].start_time << "      " << processes[i].completion_time;
+            } else{
+                cout << "       " << processes[i].completion_time;
+            }
+        }
     }
 
-
-
-//    cout<<endl;
-//    cout << "Grant Chart: " << endl;
-//    for (int i = 0; i < p; ++i) {
-//        if(i == 0 || processes[i-1].completion_time != processes[i].start_time){
-//            if(i != 0){
-//                cout<<"Process: IDLE CASE, ";
-//                cout<<"Execution time: ("<<processes[i-1].completion_time<<", "<<processes[i].start_time<<")"<<endl;
-//            }
-//            cout<<"Process: "<<processes[i].name<<", ";
-//            cout<<"Execution time: ("<<processes[i].start_time<<", "<<processes[i].completion_time<<")"<<endl;
-//        } else{
-//            cout<<"Process: "<<processes[i].name<<", ";
-//            cout<<"Execution time: ("<<processes[i].start_time<<", "<<processes[i].completion_time<<")"<<endl;
-//        }
-//    }
-
-
-    cout<<endl;
+    cout<<endl << endl;
 
     for (int i = 0; i < p; ++i) {
         processes[i].turn_around_time = processes[i].completion_time - processes[i].arrival_time;
@@ -118,14 +112,14 @@ int main() {
 
     cout<<"Turn Around Time: "<<endl;
     for (int i = 0; i < p; ++i) {
-        cout<<processes[i].name<<"= "<<processes[i].turn_around_time<<endl;
+        cout<<processes[i].name<<" = "<<processes[i].turn_around_time<<endl;
         sum_turn_around_time += processes[i].turn_around_time;
     }
 
     cout<<endl;
     cout<<"Waiting Time: "<<endl;
     for (int i = 0; i < p; ++i) {
-        cout<<processes[i].name<<"= "<<processes[i].waiting_time<<endl;
+        cout<<processes[i].name<<" = "<<processes[i].waiting_time<<endl;
         sum_waiting_time += processes[i].waiting_time;
     }
 

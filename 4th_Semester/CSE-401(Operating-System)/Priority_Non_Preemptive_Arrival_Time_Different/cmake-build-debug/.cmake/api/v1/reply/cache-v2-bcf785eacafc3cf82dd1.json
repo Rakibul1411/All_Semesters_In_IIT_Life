@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Priority_Non_Preemptive_Arrival_Time_Different/cmake-build-debug"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Priority_Non_Preemptive_Arrival_Time_Different/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Priority_Non_Preemptive_Arrival_Time_Different/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Priority_Non_Preemptive_Arrival_Time_Different/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Priority_Non_Preemptive_Arrival_Time_Different"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Priority_Non_Preemptive_Arrival_Time_Different"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -759,7 +759,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "14.3"
 		},
 		{
 			"name" : "CMAKE_OSX_SYSROOT",
@@ -771,7 +771,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk"
+			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -1127,7 +1127,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Priority_Non_Preemptive_Arrival_Time_Different/cmake-build-debug"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Priority_Non_Preemptive_Arrival_Time_Different/cmake-build-debug"
 		},
 		{
 			"name" : "Priority_Non_Preemptive_Arrival_Time_Different_IS_TOP_LEVEL",
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Priority_Non_Preemptive_Arrival_Time_Different"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Priority_Non_Preemptive_Arrival_Time_Different"
 		}
 	],
 	"kind" : "cache",
