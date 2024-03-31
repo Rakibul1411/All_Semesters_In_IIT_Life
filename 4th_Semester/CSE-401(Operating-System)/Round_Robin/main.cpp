@@ -19,10 +19,8 @@ int main() {
     cin>> p;
 
     vector<Process> processes(p);
-    //vector<string> queue;
     vector<Process> store(p);
     map<int, string> myMap;
-    //vector<int> completion_times(p, 0);
 
     int time_quantum;
 
@@ -34,12 +32,6 @@ int main() {
         cin >> processes[i].name;
         cin >> processes[i].burst_time;
     }
-
-    //queue.reserve(p);
-//    for (int i = 0; i < p; ++i) {
-//        queue.push_back(processes[i].name);
-//
-//    }
 
     store = processes;
 
@@ -60,8 +52,7 @@ int main() {
                     if (processes[i].burst_time == 0) {
                         for (int j = 0; j < p; ++j) {
                             if (processes[i].name == processes[j].name) {
-                                processes[i].turn_around_time =
-                                        processes[i].completion_time - processes[i].arrival_time;
+                                processes[i].turn_around_time = processes[i].completion_time - processes[i].arrival_time;
                                 processes[i].waiting_time = processes[i].turn_around_time - store[i].burst_time;
                                 --remaining_processes;
                             }
@@ -72,10 +63,22 @@ int main() {
         }
     }
 
+    cout << endl;
+
+    cout << "Gantt Chart: "<< endl;
+    int previous_time = 0;
+    cout << "|   ";
+    for (auto & i : myMap) {
+        cout << i.second << "   |   ";
+    }
+    cout << endl;
+    cout << previous_time << "        ";
+    for (auto & i : myMap) {
+        cout << i.first << "        ";
+    }
+
     double total_turnaround_time = 0, total_waiting_time = 0;
-    cout << "\nCompletion Times:\n";
     for (int i = 0; i < p; ++i) {
-        cout << processes[i].name << " = " << processes[i].completion_time << endl;
         total_turnaround_time += processes[i].turn_around_time;
         total_waiting_time += processes[i].waiting_time;
     }
@@ -84,7 +87,7 @@ int main() {
         processes[i].turn_around_time = processes[i].completion_time-processes[i].arrival_time;
     }
 
-    cout<<endl;
+    cout<<endl<<endl;
 
     cout<<"Turn Around Time: "<<endl;
     for (int i = 0; i < p; ++i) {
@@ -99,15 +102,9 @@ int main() {
     }
 
     cout<<endl;
-    int previous_time = 0;
-    for (auto i = myMap.begin(); i != myMap.end(); ++i) {
-        cout << "Execution time: (" << previous_time << ", " << i->first << ") ---> Process: " << i->second << endl;
-        previous_time = i->first;
-    }
 
-
-    cout << "\nAverage Turnaround Time: " << total_turnaround_time / p << endl;
-    cout << "Average Waiting Time: " << total_waiting_time / p << endl;
+    cout << "Average Turnaround Time: " << (total_turnaround_time / p) << endl;
+    cout << "Average Waiting Time: " << (total_waiting_time / p) << endl;
 
     cout<<endl;
 

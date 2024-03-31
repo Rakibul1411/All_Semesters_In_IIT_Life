@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Round_Robin/cmake-build-debug"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Preemptive_Priority_Scheduling/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Round_Robin/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Preemptive_Priority_Scheduling/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Round_Robin"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Preemptive_Priority_Scheduling"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -759,7 +759,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : ""
+			"value" : "14.3"
 		},
 		{
 			"name" : "CMAKE_OSX_SYSROOT",
@@ -771,7 +771,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.2.sdk"
+			"value" : "/Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk"
 		},
 		{
 			"name" : "CMAKE_PLATFORM_INFO_INITIALIZED",
@@ -819,7 +819,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "Round_Robin"
+			"value" : "Preemptive_Priority_Scheduling"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1118,7 +1118,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "Round_Robin_BINARY_DIR",
+			"name" : "Preemptive_Priority_Scheduling_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1127,10 +1127,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Round_Robin/cmake-build-debug"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Preemptive_Priority_Scheduling/cmake-build-debug"
 		},
 		{
-			"name" : "Round_Robin_IS_TOP_LEVEL",
+			"name" : "Preemptive_Priority_Scheduling_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1142,7 +1142,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "Round_Robin_SOURCE_DIR",
+			"name" : "Preemptive_Priority_Scheduling_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1151,7 +1151,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/Round_Robin"
+			"value" : "/Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/Preemptive_Priority_Scheduling"
 		}
 	],
 	"kind" : "cache",
