@@ -1,16 +1,38 @@
-/Users/md.rakibulislam/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/md.rakibulislam/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/SJF_Arrival_Time_Different" -B "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/SJF_Arrival_Time_Different/cmake-build-debug"
--- The C compiler identification is AppleClang 15.0.0.15000309
--- The CXX compiler identification is AppleClang 15.0.0.15000309
--- Detecting C compiler ABI info
--- Detecting C compiler ABI info - done
--- Check for working C compiler: /Library/Developer/CommandLineTools/usr/bin/cc - skipped
--- Detecting C compile features
--- Detecting C compile features - done
--- Detecting CXX compiler ABI info
--- Detecting CXX compiler ABI info - done
--- Check for working CXX compiler: /Library/Developer/CommandLineTools/usr/bin/c++ - skipped
--- Detecting CXX compile features
--- Detecting CXX compile features - done
--- Configuring done (5.6s)
--- Generating done (0.0s)
--- Build files have been written to: /Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/SJF_Arrival_Time_Different/cmake-build-debug
+/Users/md.rakibulislam/Applications/CLion.app/Contents/bin/cmake/mac/aarch64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/Users/md.rakibulislam/Applications/CLion.app/Contents/bin/ninja/mac/aarch64/ninja -G Ninja -S /Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/SJF_Arrival_Time_Different(Non-Preemptive) -B /Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/SJF_Arrival_Time_Different(Non-Preemptive)/cmake-build-debug
+CMake Error: Could not find cmake module file: CMakeDetermine(Compiler.cmake
+CMake Error: Could not find cmake module file: /Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/SJF_Arrival_Time_Different(Non-Preemptive)/cmake-build-debug/CMakeFiles/3.27.8/CMake(Compiler.cmake
+CMake Error: Could not find cmake module file: CMakeDetermineNon-PreemptiveCompiler.cmake
+CMake Error: Could not find cmake module file: /Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/SJF_Arrival_Time_Different(Non-Preemptive)/cmake-build-debug/CMakeFiles/3.27.8/CMakeNon-PreemptiveCompiler.cmake
+CMake Error: Could not find cmake module file: CMakeDetermine)Compiler.cmake
+CMake Error: Could not find cmake module file: /Users/md.rakibulislam/All_Semesters_In_IIT_Life/4th_Semester/CSE-401(Operating-System)/SJF_Arrival_Time_Different(Non-Preemptive)/cmake-build-debug/CMakeFiles/3.27.8/CMake)Compiler.cmake
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_(_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting the CMake cache entry
+  CMAKE_(_COMPILER to the full path to the compiler, or to the compiler name
+  if it is in the PATH.
+
+
+CMake Error: Could not find cmake module file: CMake(Information.cmake
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_Non-Preemptive_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting the CMake cache entry
+  CMAKE_Non-Preemptive_COMPILER to the full path to the compiler, or to the
+  compiler name if it is in the PATH.
+
+
+CMake Error: Could not find cmake module file: CMakeNon-PreemptiveInformation.cmake
+CMake Error at CMakeLists.txt:2 (project):
+  No CMAKE_)_COMPILER could be found.
+
+  Tell CMake where to find the compiler by setting the CMake cache entry
+  CMAKE_)_COMPILER to the full path to the compiler, or to the compiler name
+  if it is in the PATH.
+
+
+CMake Error: Could not find cmake module file: CMake)Information.cmake
+CMake Error: CMAKE_(_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_Non-Preemptive_COMPILER not set, after EnableLanguage
+CMake Error: CMAKE_)_COMPILER not set, after EnableLanguage
+-- Configuring incomplete, errors occurred!
