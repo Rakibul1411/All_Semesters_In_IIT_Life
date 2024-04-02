@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.27)
+project(Estimating_the_value_of_Pi_using_Monte_Carlo_using_Multiple_Threads)
+
+set(CMAKE_CXX_STANDARD 17)
+
+add_executable(Estimating_the_value_of_Pi_using_Monte_Carlo_using_Multiple_Threads main.cpp)
