@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "SHA_512__Own_Code_",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "SHA_512__Own_Code_::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SHA_512__Own_Code_-Debug-612f14381aa8d5ee7fa2.json",
+					"name" : "SHA_512__Own_Code_",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-411/SHA-512 (Own Code)/cmake-build-debug",
+		"source" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-411/SHA-512 (Own Code)"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
