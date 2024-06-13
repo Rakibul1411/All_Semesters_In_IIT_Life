@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.28"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "_New_Pizza_Problem",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "_New_Pizza_Problem::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-_New_Pizza_Problem-Debug-34e50d766f9661214d29.json",
+					"name" : "_New_Pizza_Problem",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/ New Pizza Problem/cmake-build-debug",
+		"source" : "/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/ New Pizza Problem"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

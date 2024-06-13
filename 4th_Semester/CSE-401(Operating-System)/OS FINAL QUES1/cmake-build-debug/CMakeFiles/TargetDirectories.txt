@@ -1,0 +1,3 @@
+/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/OS FINAL QUES1/cmake-build-debug/CMakeFiles/OS_FINAL_QUES1.dir
+/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/OS FINAL QUES1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/md.rakibulislam/IIT Life/All Semester in IIT Life/4th Semester/4th Semester Lab Codes/CSE-401/OS FINAL QUES1/cmake-build-debug/CMakeFiles/rebuild_cache.dir

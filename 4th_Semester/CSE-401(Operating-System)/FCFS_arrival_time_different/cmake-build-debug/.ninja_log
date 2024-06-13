@@ -1,7 +1,21 @@
 # ninja log v5
 2	709	1709495560647461446	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	774026a79a260e3d
 709	832	1709495560772570416	FCFS_arrival_time_different	cff2804594e26e07
-1	699	1711927095025057144	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	b862a16caedaed14
-702	904	1711927095228805077	FCFS_arrival_time_different	db7756865c7c5b6d
-2	1129	1711927134964168905	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	b862a16caedaed14
-1129	1285	1711927135121425524	FCFS_arrival_time_different	db7756865c7c5b6d
+1	522	1710149418205813804	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+524	563	1710149418248102440	FCFS_arrival_time_different	db7756865c7c5b6d
+12	775	1711497154875899002	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+775	933	1711497155036594629	FCFS_arrival_time_different	db7756865c7c5b6d
+3	715	1711497548609380315	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+715	847	1711497548741609651	FCFS_arrival_time_different	db7756865c7c5b6d
+3	693	1711497692607959771	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+693	817	1711497692734468140	FCFS_arrival_time_different	db7756865c7c5b6d
+12	704	1711497771610926541	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+704	830	1711497771739106204	FCFS_arrival_time_different	db7756865c7c5b6d
+4	457	1711502595550013520	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+457	499	1711502595594624056	FCFS_arrival_time_different	db7756865c7c5b6d
+3	724	1711502661344732072	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+724	850	1711502661473500715	FCFS_arrival_time_different	db7756865c7c5b6d
+4	744	1711502694818853331	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+744	870	1711502694946621951	FCFS_arrival_time_different	db7756865c7c5b6d
+12	1209	1711927116089820591	CMakeFiles/FCFS_arrival_time_different.dir/main.cpp.o	d80a486ea09a368f
+1210	1373	1711927116257164268	FCFS_arrival_time_different	db7756865c7c5b6d

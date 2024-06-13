@@ -1,0 +1,10 @@
+dhaka barisal 3
+dhaka chittagong -4
+dhaka rangpur 8
+barisal chittagong 7
+barisal rajshahi 1
+rangpur barisal 4
+rajshahi rangpur -5
+rajshahi dhaka 2
+chittagong rajshahi 6
+chittagong dhaka

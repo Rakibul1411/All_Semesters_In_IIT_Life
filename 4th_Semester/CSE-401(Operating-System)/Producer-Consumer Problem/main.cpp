@@ -8,8 +8,8 @@
 typedef int buffer_item;
 #define BUFFER_SIZE 7
 buffer_item buffer[BUFFER_SIZE];
-int insertIndex;
-int removeIndex;
+int insertIndex=0;
+int removeIndex=0;
 
 sem_t full;
 sem_t empty;
@@ -37,7 +37,8 @@ int insert_item(buffer_item item) {
         //printf("Could not insert into buffer. An item already exists!\n");
         return -1;
 
-    } else {
+    }
+    else {
         buffer[insertIndex] = item;
 
         insertIndex++;
@@ -103,7 +104,7 @@ void *producer(void *param) {
 }
 
 void *consumer(void *param) {
-    auto *item = (int *)malloc(sizeof(int));
+    buffer_item item;
     while (1) {
         printf("in consumer.\n");
 
@@ -115,7 +116,7 @@ void *consumer(void *param) {
 
         printf("in consumer critical section.\n");
 
-        if (remove_item(*item) < 0) {
+        if (remove_item(item) < 0) {
             printf("Could not remove from buffer. The item does not exist!\n");
         }
 
@@ -124,7 +125,7 @@ void *consumer(void *param) {
         sem_post(&empty);
 
     }
-    free(item);
+    free((void*)item);
 }
 
 
@@ -133,7 +134,7 @@ int main(int argc, char*argv[]) {
     int producerCount;
     int consumerCount;
 
-    if (argv[1] == NULL || argv[2] == NULL || argv[3] == NULL) {
+    if (argv[1] == nullptr || argv[2] == nullptr || argv[3] == nullptr) {
         printf("Enter 3 arguments: sleep time, number of producers, number of consumers. \n");
         return -1;
 
@@ -144,8 +145,8 @@ int main(int argc, char*argv[]) {
 
     }
 
-    seed = (unsigned int)time(NULL);
-    pthread_mutex_init(&mutex, NULL);
+    seed = (unsigned int)time(nullptr);
+    pthread_mutex_init(&mutex, nullptr);
     sem_init(&empty, 0, BUFFER_SIZE);
     sem_init(&full, 0, 0);
 
@@ -157,7 +158,7 @@ int main(int argc, char*argv[]) {
         pthread_attr_init(&pt_attr);
 
 
-        int producerResults = pthread_create(&producers[i], &pt_attr, producer, NULL);
+        int producerResults = pthread_create(&producers[i], &pt_attr, producer, nullptr);
         if (producerResults == -1) {
             printf("Error creating producer thread.\n");
 
@@ -165,13 +166,14 @@ int main(int argc, char*argv[]) {
 
     }
 
+    printf("\n----------------------------\n");
     pthread_t consumers[consumerCount];
     for (i = 0; i < consumerCount; i++) {
         pthread_attr_t ct_attr;
 
         pthread_attr_init(&ct_attr);
 
-        int consumerResults = pthread_create(&consumers[i], &ct_attr, consumer, NULL);
+        int consumerResults = pthread_create(&consumers[i], &ct_attr, consumer, nullptr);
         if (consumerResults == -1) {
             printf("Error creating consumer thread.\n");
 

@@ -1,0 +1,16 @@
+Daily Unique User Logins Report
+===============================
+
+20240515        9
+20240516        7
+20240517        7
+20240518        7
+20240519        6
+
+Date with the highest number of unique logins:- Date= 20240515 (       9 unique logins)
+
+Date with the lowest number of unique logins:- Date= 20240519 (       6 unique logins)
+
+
+
+

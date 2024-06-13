@@ -1,60 +1,71 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-#include <cmath>
 #include <pthread.h>
 
 using namespace std;
-
 unsigned int seed;
 
-float randomNumberGenerator() {
-    return rand_r(&seed) / (float)RAND_MAX;
+double randomNumberGenerator() {
+    return rand_r(&seed) / (double)RAND_MAX;
 }
 
 void* calculatePi(void* arg) {
-    auto totCount = (long long)arg;
-    float total = 0;
+    auto totalCount = *(unsigned long long*)arg;
+    unsigned long long insideCircleCount = 0;
 
-    for (long long i = 0; i < totCount; ++i) {
-        float x = randomNumberGenerator();
-        float y = randomNumberGenerator();
-        float result = sqrt(x * x + y * y);
-        if (result <= 1) {
-            total += 1;
+    for (unsigned long long i = 0; i < totalCount; ++i) {
+        double x = randomNumberGenerator();
+        double y = randomNumberGenerator();
+        double distance = x * x + y * y;
+        if (distance <= 1) {
+            insideCircleCount++;
         }
     }
 
-    auto* resultPtr = new float(total);
+    auto* resultPtr = new double((double)insideCircleCount / totalCount);
     pthread_exit(resultPtr);
 }
 
 int main(int argc, char* argv[]) {
     if (argc != 2) {
-        cerr << "Usage: " << argv[0] << " <TOT_COUNT>" << endl;
+        cerr << "Please Input Correct format in command line." << endl;
         return 1;
     }
 
     seed = time(nullptr);
 
-    unsigned long long totCount = atoll(argv[1]);
-    unsigned long long totalCountPerThread = totCount / 10;
+    unsigned long long totalCount = atoll(argv[1]);
+    unsigned long long totalCountPerThread = totalCount / 10;
+
+    clock_t startTime = clock();
 
     pthread_t threads[10];
-    void* threadResults[10];
+    double* threadResults[10];
 
-    for (auto & thread : threads) {
-        pthread_create(&thread, nullptr, calculatePi, (void*)totalCountPerThread);
-    }
-
-    float total = 0;
     for (int i = 0; i < 10; ++i) {
-        pthread_join(threads[i], &threadResults[i]);
-        total += *(float*)threadResults[i];
-        delete (float*)threadResults[i];
+        pthread_create(&threads[i], nullptr, calculatePi, (void*)&totalCountPerThread);
     }
 
-    cout << "Value for Pi: " << 4 * (total / totCount) << endl;
+    for (int i = 0; i < 10; ++i) {
+        pthread_join(threads[i], (void**)&threadResults[i]);
+    }
+
+    double totalInsideCircleRatio = 0;
+    for (int i = 0; i < 10; ++i) {
+        totalInsideCircleRatio += *threadResults[i];
+        delete threadResults[i];
+    }
+
+
+    double estimatedPi = 4.0 * totalInsideCircleRatio / 10;
+    cout << "Estimated value of Pi: " << estimatedPi << endl;
+
+    clock_t endTime = clock();
+
+    double totalTime = double (endTime - startTime) / CLOCKS_PER_SEC;
+
+    cout << "Total time take for execution: " << totalTime << " seconds" << endl;
 
     return 0;
 }

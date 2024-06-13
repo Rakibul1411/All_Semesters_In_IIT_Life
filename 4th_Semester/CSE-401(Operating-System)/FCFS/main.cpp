@@ -89,7 +89,7 @@ int main() {
     for (int i = 0; i < p; ++i) {
         sum_waiting_time += processes[i].waiting_time;
     }
-    cout<<"Average Waiting Time: "<<(sum_waiting_time / p) << endl;
+    cout<<"Average Waiting Time: "<<(sum_waiting_time / p);
 
     return 0;
 }
